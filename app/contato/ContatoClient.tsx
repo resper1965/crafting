@@ -86,10 +86,6 @@ export default function ContatoClient() {
               </div>
             </div>
           </AnimatedSection>
-
-              </div>
-            </div>
-          </AnimatedSection>
         </div>
 
         {/* Mapa e Como chegar - Seção separada */}
