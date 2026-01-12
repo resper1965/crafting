@@ -2,6 +2,13 @@
 
 import { AnimatedSection } from '@/components/AnimatedSection'
 
+// Conteúdo extraído do site antigo
+const content = {
+  h1: 'Time',
+  h2: ['Eduardo Matias', 'Leonardo Morato'],
+  text: 'Um time de especialistas em reestruturações complexas com mais de 25 anos de experiência e participação ativa em diferentes projetos.'
+}
+
 export default function Time() {
   return (
     <section className="section-padding bg-crafting-grafite relative overflow-hidden">
@@ -12,30 +19,29 @@ export default function Time() {
           <div className="max-w-2xl mx-auto">
             <h1 className="mb-12 font-light tracking-tight">Time</h1>
             
-            <div className="space-y-8">
+            <div className="space-y-10">
               <AnimatedSection delay={0.1}>
                 <p className="text-crafting-cinzaAlvo/80 leading-relaxed font-light text-lg">
-                  Nossa equipe é composta por profissionais altamente qualificados e experientes, com formação sólida e histórico comprovado em reestruturações empresariais complexas.
+                  {content.text}
                 </p>
               </AnimatedSection>
               
-              <AnimatedSection delay={0.2}>
-                <p className="text-crafting-cinzaAlvo/70 leading-relaxed font-light">
-                  Os sócios da Crafting Solutions participam ativamente de cada projeto, garantindo que o conhecimento acumulado ao longo de mais de 25 anos de experiência seja aplicado diretamente nas soluções desenvolvidas para nossos clientes.
-                </p>
-              </AnimatedSection>
-              
-              <AnimatedSection delay={0.3}>
-                <p className="text-crafting-cinzaAlvo/70 leading-relaxed font-light">
-                  Combinamos expertise em diferentes áreas - estratégia, operações, finanças, direito empresarial e gestão - para oferecer uma visão 360 graus dos desafios enfrentados pelas empresas.
-                </p>
-              </AnimatedSection>
-              
-              <AnimatedSection delay={0.4}>
-                <p className="text-crafting-cinzaAlvo/70 leading-relaxed font-light">
-                  O comprometimento e a dedicação de nosso time são fundamentais para o sucesso dos projetos. Trabalhamos em parceria com nossos clientes, sempre com transparência, ética e foco em resultados.
-                </p>
-              </AnimatedSection>
+              {content.h2.length > 0 && (
+                <AnimatedSection delay={0.2}>
+                  <div className="space-y-8 mt-12">
+                    {content.h2.map((member, index) => (
+                      <div key={index} className="border-t border-crafting-verde/10 pt-8">
+                        <h2 className="text-2xl text-crafting-branco mb-4 font-light tracking-tight">
+                          {member}
+                        </h2>
+                        <p className="text-crafting-cinzaAlvo/70 leading-relaxed font-light">
+                          {/* Informações adicionais dos membros podem ser adicionadas aqui quando disponíveis */}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </AnimatedSection>
+              )}
             </div>
           </div>
         </AnimatedSection>

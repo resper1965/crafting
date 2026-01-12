@@ -1,0 +1,19 @@
+{
+  "name": "crafting-crawler",
+  "version": "1.0.0",
+  "description": "Crawler para extrair conteúdo do site antigo Crafting Solutions",
+  "type": "module",
+  "main": "crawl.js",
+  "scripts": {
+    "crawl": "node crawl.js",
+    "crawl:dry": "node crawl.js --dry-run"
+  },
+  "keywords": ["crawler", "scraper"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "fast-xml-parser": "^4.3.2",
+    "p-limit": "^5.0.0"
+  }
+}

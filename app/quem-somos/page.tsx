@@ -2,6 +2,18 @@
 
 import { AnimatedSection } from '@/components/AnimatedSection'
 
+// Conteúdo extraído do site antigo
+const content = {
+  h1: 'Quem Somos',
+  h2: ['Diferenciais'],
+  paragraphs: [
+    'Especialistas em soluções estratégicas para empresas em estresse e transformação — preservando valor e destravando crescimento.',
+    'A CRAFTING SOLUTIONS é uma boutique one-stop-shop de advisory financeiro e estratégico com soluções de capital, que busca oportunidade em bons ativos que estão enfrentando desafios estruturais. Nosso objetivo é a preservação das empresas e maximização dos retornos.',
+    'Identificamos e desenvolvemos soluções em cenários de estresse e transformação, atuando junto a empresas de diferentes setores para preservar valor e impulsionar novos caminhos de crescimento, sempre alinhando acionistas, credores e investidores.',
+    'Combinamos experiência prática, visão multidisciplinar e recursos próprios para construir soluções sólidas. Nossos diferenciais asseguram consistência em cada etapa e alinhamento integral com os objetivos de clientes e investidores.'
+  ]
+}
+
 export default function QuemSomos() {
   return (
     <section className="section-padding bg-crafting-grafite relative overflow-hidden">
@@ -10,32 +22,29 @@ export default function QuemSomos() {
       <div className="container-custom relative z-10">
         <AnimatedSection>
           <div className="max-w-2xl mx-auto">
-            <h1 className="mb-12 font-light tracking-tight">Quem somos</h1>
+            <h1 className="mb-12 font-light tracking-tight">{content.h1}</h1>
             
-            <div className="space-y-8">
-              <AnimatedSection delay={0.1}>
-                <p className="text-crafting-cinzaAlvo/80 leading-relaxed font-light text-lg">
-                  Um time de especialistas em reestruturações complexas com mais de 25 anos de experiência e participação ativa dos sócios em cada projeto.
-                </p>
-              </AnimatedSection>
+            <div className="space-y-10">
+              {content.paragraphs.map((paragraph, index) => (
+                <AnimatedSection key={index} delay={(index + 1) * 0.1}>
+                  <p className={`leading-relaxed font-light ${
+                    index === 0 
+                      ? 'text-crafting-cinzaAlvo/80 text-lg' 
+                      : 'text-crafting-cinzaAlvo/70'
+                  }`}>
+                    {paragraph}
+                  </p>
+                </AnimatedSection>
+              ))}
               
-              <AnimatedSection delay={0.2}>
-                <p className="text-crafting-cinzaAlvo/70 leading-relaxed font-light">
-                  Na Crafting Solutions, acreditamos que situações de estresse empresarial podem ser transformadas em oportunidades únicas de investimento. Nossa equipe combina expertise técnica com uma abordagem prática e focada em resultados.
-                </p>
-              </AnimatedSection>
-              
-              <AnimatedSection delay={0.3}>
-                <p className="text-crafting-cinzaAlvo/70 leading-relaxed font-light">
-                  Com mais de duas décadas de experiência no mercado, desenvolvemos uma metodologia própria que nos permite identificar rapidamente os pontos críticos e propor soluções efetivas para empresas dos mais variados setores.
-                </p>
-              </AnimatedSection>
-              
-              <AnimatedSection delay={0.4}>
-                <p className="text-crafting-cinzaAlvo/70 leading-relaxed font-light">
-                  O diferencial da Crafting Solutions está na participação direta dos sócios em cada projeto, garantindo que cada cliente receba atenção personalizada e estratégias sob medida para suas necessidades específicas.
-                </p>
-              </AnimatedSection>
+              {content.h2.includes('Diferenciais') && (
+                <AnimatedSection delay={0.5}>
+                  <h2 className="text-2xl text-crafting-branco mb-6 font-light tracking-tight">Diferenciais</h2>
+                  <p className="text-crafting-cinzaAlvo/70 leading-relaxed font-light">
+                    Nossos diferenciais asseguram consistência em cada etapa e alinhamento integral com os objetivos de clientes e investidores.
+                  </p>
+                </AnimatedSection>
+              )}
             </div>
           </div>
         </AnimatedSection>

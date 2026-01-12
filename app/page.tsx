@@ -23,8 +23,11 @@ export default function Home() {
               </h1>
             </AnimatedText>
             <AnimatedText delay={0.2}>
-              <p className="text-lg text-crafting-cinzaAlvo/90 mb-12 max-w-2xl leading-relaxed font-light">
+              <p className="text-lg text-crafting-cinzaAlvo/90 mb-8 max-w-2xl leading-relaxed font-light">
                 Localizamos oportunidades nas situações de estresse enfrentadas por empresas dos mais variados ramos de atividade.
+              </p>
+              <p className="text-lg text-crafting-cinzaAlvo/80 mb-12 max-w-2xl leading-relaxed font-light">
+                Um time de especialistas em reestruturações complexas com mais de 25 anos de experiência e participação ativa dos sócios em cada projeto.
               </p>
             </AnimatedText>
             <AnimatedText delay={0.4}>
@@ -127,7 +130,10 @@ export default function Home() {
           <AnimatedSection>
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="mb-8 font-light tracking-tight">Quem somos</h2>
-              <p className="text-crafting-cinzaAlvo/80 mb-12 leading-relaxed font-light">
+              <p className="text-crafting-cinzaAlvo/80 mb-6 leading-relaxed font-light">
+                Especialistas em soluções estratégicas para empresas em estresse e transformação — preservando valor e destravando crescimento.
+              </p>
+              <p className="text-crafting-cinzaAlvo/70 mb-12 leading-relaxed font-light">
                 Um time de especialistas em reestruturações complexas com mais de 25 anos de experiência e participação ativa dos sócios em cada projeto.
               </p>
               <motion.div
@@ -155,8 +161,11 @@ export default function Home() {
           <AnimatedSection>
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="mb-6 font-light tracking-tight">Soluções em Reestruturação, Turnaround e Governança</h2>
-              <p className="text-crafting-cinzaAlvo/80 mb-12 leading-relaxed font-light">
+              <p className="text-crafting-cinzaAlvo/80 mb-8 leading-relaxed font-light">
                 Transformamos desafios em oportunidades únicas de investimentos.
+              </p>
+              <p className="text-crafting-cinzaAlvo/70 mb-12 leading-relaxed font-light">
+                Localizamos oportunidades nas situações de estresse enfrentadas por empresas dos mais variados ramos de atividade.
               </p>
               <motion.div
                 whileHover={{ scale: 1.05 }}

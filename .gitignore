@@ -31,6 +31,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# crawler output
+crawler/out/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
