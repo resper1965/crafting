@@ -23,24 +23,26 @@ export default function ProdutosServicos() {
   return (
     <section className="section-padding bg-crafting-grafite">
       <div className="container-custom">
-        <div className="max-w-4xl mx-auto mb-12">
-          <h1 className="mb-6">Produtos & Serviços</h1>
-          <p className="text-lg text-crafting-cinzaAlvo">
+        <div className="max-w-2xl mx-auto mb-16">
+          <h1 className="mb-8 font-light tracking-tight">Produtos & Serviços</h1>
+          <p className="text-crafting-cinzaAlvo/80 leading-relaxed font-light">
             Localizamos oportunidades nas situações de estresse enfrentadas por empresas dos mais variados ramos de atividade.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service, index) => (
             <Card
               key={index}
-              className="bg-crafting-chumbo border-crafting-verde/20 hover:border-crafting-azul/40 transition-colors"
+              className="bg-crafting-chumbo border-crafting-verde/10 hover:border-crafting-verde/20 transition-colors rounded-sm"
             >
-              <CardHeader>
-                <CardTitle className="text-crafting-azul">{service.title}</CardTitle>
+              <CardHeader className="pb-4">
+                <CardTitle className="text-crafting-branco text-lg font-light tracking-tight">
+                  {service.title}
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-crafting-cinzaAlvo">
+                <CardDescription className="text-crafting-cinzaAlvo/70 leading-relaxed font-light text-sm">
                   {service.description}
                 </CardDescription>
               </CardContent>

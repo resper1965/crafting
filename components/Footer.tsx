@@ -11,18 +11,18 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-crafting-chumbo border-t border-crafting-verde/20">
+    <footer className="bg-crafting-chumbo border-t border-crafting-verde/10">
       <div className="container-custom section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
           {/* Navegação */}
           <div>
-            <h3 className="font-display text-crafting-branco font-medium mb-4">Navegação</h3>
-            <ul className="space-y-2">
+            <h3 className="font-display text-crafting-branco font-light mb-6 text-sm tracking-wide uppercase">Navegação</h3>
+            <ul className="space-y-3">
               {navItems.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-crafting-cinzaAlvo hover:text-crafting-branco transition-colors text-sm"
+                    className="text-crafting-cinzaAlvo/70 hover:text-crafting-branco transition-colors text-sm font-light"
                   >
                     {item.label}
                   </Link>
@@ -33,8 +33,8 @@ export default function Footer() {
 
           {/* Contato */}
           <div>
-            <h3 className="font-display text-crafting-branco font-medium mb-4">Contato</h3>
-            <ul className="space-y-3 text-crafting-cinzaAlvo text-sm">
+            <h3 className="font-display text-crafting-branco font-light mb-6 text-sm tracking-wide uppercase">Contato</h3>
+            <ul className="space-y-4 text-crafting-cinzaAlvo/70 text-sm font-light leading-relaxed">
               <li>
                 Rua Alexandre Dumas, 1711<br />
                 Chácara Santo Antônio<br />
@@ -55,13 +55,13 @@ export default function Footer() {
 
           {/* Como chegar */}
           <div>
-            <h3 className="font-display text-crafting-branco font-medium mb-4">Como chegar</h3>
-            <div className="flex flex-col space-y-2">
+            <h3 className="font-display text-crafting-branco font-light mb-6 text-sm tracking-wide uppercase">Como chegar</h3>
+            <div className="flex flex-col space-y-3">
               <a
                 href="https://waze.com/ul?q=Rua%20Alexandre%20Dumas,%201711,%20Chácara%20Santo%20Antônio,%20São%20Paulo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-crafting-cinzaAlvo hover:text-crafting-branco transition-colors text-sm"
+                className="text-crafting-cinzaAlvo/70 hover:text-crafting-branco transition-colors text-sm font-light"
               >
                 Waze
               </a>
@@ -69,7 +69,7 @@ export default function Footer() {
                 href="https://maps.google.com/?q=Rua+Alexandre+Dumas,+1711,+Chácara+Santo+Antônio,+São+Paulo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-crafting-cinzaAlvo hover:text-crafting-branco transition-colors text-sm"
+                className="text-crafting-cinzaAlvo/70 hover:text-crafting-branco transition-colors text-sm font-light"
               >
                 Google Maps
               </a>
@@ -77,15 +77,15 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-crafting-verde/20 text-center text-crafting-cinzaUrbano text-sm">
+        <div className="mt-16 pt-8 border-t border-crafting-verde/10 text-center text-crafting-cinzaUrbano/60 text-xs font-light">
           <p>© 2026 Crafting Solutions. Todos os direitos reservados.</p>
-          <p className="mt-2">
+          <p className="mt-3">
             Criado por{' '}
             <a
               href="https://tangomarketing.com.br"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-crafting-azul hover:text-crafting-verde transition-colors"
+              className="text-crafting-cinzaAlvo/70 hover:text-crafting-branco transition-colors"
             >
               Tango Marketing
             </a>
