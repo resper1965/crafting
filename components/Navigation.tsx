@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { NAV_ITEMS } from '@/lib/constants'
 
 export default function Navigation() {
   const pathname = usePathname()

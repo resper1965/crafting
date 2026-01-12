@@ -63,65 +63,22 @@ export default function HomeClient() {
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <AnimatedCard delay={0.1}>
-              <Card className="group bg-crafting-grafite border-crafting-verde/10 hover:border-crafting-azul/40 transition-all duration-500 rounded-sm hover:shadow-lg hover:shadow-crafting-azul/10">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-crafting-branco text-lg font-light tracking-tight group-hover:text-crafting-azul transition-colors duration-300">
-                    Diagnósticos estratégicos e operacionais
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-crafting-cinzaAlvo/70 leading-relaxed font-light text-sm group-hover:text-crafting-cinzaAlvo/90 transition-colors duration-300">
-                    Análise profunda da situação atual da empresa, identificando pontos críticos e oportunidades de melhoria.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </AnimatedCard>
-
-            <AnimatedCard delay={0.2}>
-              <Card className="group bg-crafting-grafite border-crafting-verde/10 hover:border-crafting-azul/40 transition-all duration-500 rounded-sm hover:shadow-lg hover:shadow-crafting-azul/10">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-crafting-branco text-lg font-light tracking-tight group-hover:text-crafting-azul transition-colors duration-300">
-                    Planos de reestruturação
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-crafting-cinzaAlvo/70 leading-relaxed font-light text-sm group-hover:text-crafting-cinzaAlvo/90 transition-colors duration-300">
-                    Desenvolvimento de estratégias personalizadas para reestruturação empresarial, focadas em resultados sustentáveis.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </AnimatedCard>
-
-            <AnimatedCard delay={0.3}>
-              <Card className="group bg-crafting-grafite border-crafting-verde/10 hover:border-crafting-azul/40 transition-all duration-500 rounded-sm hover:shadow-lg hover:shadow-crafting-azul/10">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-crafting-branco text-lg font-light tracking-tight group-hover:text-crafting-azul transition-colors duration-300">
-                    Gestão e governança
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-crafting-cinzaAlvo/70 leading-relaxed font-light text-sm group-hover:text-crafting-cinzaAlvo/90 transition-colors duration-300">
-                    Implementação de práticas eficientes de gestão e governança corporativa, garantindo transparência e controle.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </AnimatedCard>
-
-            <AnimatedCard delay={0.4}>
-              <Card className="group bg-crafting-grafite border-crafting-verde/10 hover:border-crafting-azul/40 transition-all duration-500 rounded-sm hover:shadow-lg hover:shadow-crafting-azul/10">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-crafting-branco text-lg font-light tracking-tight group-hover:text-crafting-azul transition-colors duration-300">
-                    Soluções de capital
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-crafting-cinzaAlvo/70 leading-relaxed font-light text-sm group-hover:text-crafting-cinzaAlvo/90 transition-colors duration-300">
-                    Acesso a fontes de capital e estruturação financeira adequada para viabilizar projetos de reestruturação.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </AnimatedCard>
+            {SERVICES.map((service, index) => (
+              <AnimatedCard key={service.title} delay={(index + 1) * 0.1}>
+                <Card className="group bg-crafting-grafite border-crafting-verde/10 hover:border-crafting-azul/40 transition-all duration-500 rounded-sm hover:shadow-lg hover:shadow-crafting-azul/10">
+                  <CardHeader className="pb-4">
+                    <CardTitle className="text-crafting-branco text-lg font-light tracking-tight group-hover:text-crafting-azul transition-colors duration-300">
+                      {service.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-crafting-cinzaAlvo/70 leading-relaxed font-light text-sm group-hover:text-crafting-cinzaAlvo/90 transition-colors duration-300">
+                      {service.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </AnimatedCard>
+            ))}
           </div>
         </div>
       </section>

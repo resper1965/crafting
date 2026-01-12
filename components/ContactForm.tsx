@@ -7,7 +7,7 @@ import * as z from 'zod'
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
 import { Loader2 } from 'lucide-react'
-import { useToast } from '@/components/ui/use-toast'
+import { useToast } from '@/hooks/use-toast'
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Nome deve ter pelo menos 2 caracteres'),

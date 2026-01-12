@@ -13,6 +13,19 @@
 }
 
 @layer base {
+  /* Melhorias de acessibilidade - Focus states visíveis */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-crafting-azul ring-offset-2 ring-offset-crafting-grafite;
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    @apply outline-none ring-2 ring-crafting-azul ring-offset-2 ring-offset-crafting-grafite;
+  }
+
   body {
     @apply bg-crafting-grafite text-crafting-cinzaAlvo;
   }

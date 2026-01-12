@@ -3,6 +3,7 @@ import { Roboto, Montserrat } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
+import { Toaster } from '@/components/ui/toaster'
 
 const roboto = Roboto({ 
   subsets: ['latin'],
@@ -31,11 +32,16 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${roboto.variable} ${montserrat.variable} font-sans antialiased dark scroll-smooth`}>
+        {/* Skip to content link - Acessibilidade */}
+        <a href="#main-content" className="skip-to-content">
+          Pular para o conteúdo principal
+        </a>
         <Navigation />
-        <main className="min-h-screen">
+        <main id="main-content" className="min-h-screen" tabIndex={-1}>
           {children}
         </main>
         <Footer />
+        <Toaster />
       </body>
     </html>
   )

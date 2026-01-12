@@ -5,14 +5,7 @@ import { motion } from 'framer-motion'
 import { SITE_CONFIG, NAV_ITEMS } from '@/lib/constants'
 
 export default function Footer() {
-  const navItems = [
-    { href: '/', label: 'Home' },
-    { href: '/quem-somos', label: 'Quem Somos' },
-    { href: '/produtos-servicos', label: 'Produtos & Serviços' },
-    { href: '/time', label: 'Time' },
-    { href: '/contato', label: 'Contato' },
-    { href: '/politica-privacidade', label: 'Política de privacidade' },
-  ]
+  const navItems = [...NAV_ITEMS, { href: '/politica-privacidade', label: 'Política de privacidade' }]
 
   return (
     <footer className="bg-crafting-chumbo border-t border-crafting-verde/10 relative overflow-hidden">
@@ -92,7 +85,7 @@ export default function Footer() {
             <h3 className="font-display text-crafting-branco font-light mb-6 text-sm tracking-wide uppercase">Como chegar</h3>
             <div className="flex flex-col space-y-3">
               <motion.a
-                href="https://waze.com/ul?q=Rua%20Alexandre%20Dumas,%201711,%20Chácara%20Santo%20Antônio,%20São%20Paulo"
+                href={`https://waze.com/ul?q=${encodeURIComponent(SITE_CONFIG.address.full)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-crafting-cinzaAlvo/70 hover:text-crafting-branco transition-colors text-sm font-light group"
@@ -103,7 +96,7 @@ export default function Footer() {
                 <span className="inline-block ml-2 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
               </motion.a>
               <motion.a
-                href="https://maps.google.com/?q=Rua+Alexandre+Dumas,+1711,+Chácara+Santo+Antônio,+São+Paulo"
+                href={`https://maps.google.com/?q=${encodeURIComponent(SITE_CONFIG.address.full)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-crafting-cinzaAlvo/70 hover:text-crafting-branco transition-colors text-sm font-light group"
