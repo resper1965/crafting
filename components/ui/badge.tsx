@@ -11,7 +11,7 @@ const badgeVariants = cva(
         default:
           "border-transparent bg-crafting-azul text-crafting-branco shadow-lg shadow-crafting-azul/20 hover:bg-crafting-azul/90 hover:shadow-xl",
         secondary:
-          "border-transparent bg-crafting-verde/20 text-crafting-cinzaAlvo hover:bg-crafting-verde/30",
+          "border-transparent bg-crafting-verde/20 text-crafting-branco/90 hover:bg-crafting-verde/30",
         destructive:
           "border-transparent bg-destructive text-destructive-foreground shadow hover:bg-destructive/80",
         outline: "text-foreground border-crafting-verde/50 hover:border-crafting-azul/70 hover:bg-crafting-azul/10",

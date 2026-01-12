@@ -16,7 +16,7 @@ const buttonVariants = cva(
         outline:
           "border border-crafting-verde/30 bg-transparent text-crafting-cinzaAlvo rounded-lg backdrop-blur-sm hover:border-crafting-azul/50 hover:bg-crafting-azul/10 hover:text-crafting-branco hover:shadow-lg hover:shadow-crafting-azul/10 hover:-translate-y-0.5 active:translate-y-0",
         secondary:
-          "bg-crafting-grafite/50 border border-crafting-verde/20 text-crafting-cinzaAlvo rounded-lg backdrop-blur-sm hover:bg-crafting-grafite/70 hover:border-crafting-azul/40 hover:text-crafting-branco hover:shadow-lg hover:shadow-crafting-azul/10 hover:-translate-y-0.5 active:translate-y-0",
+          "bg-crafting-grafite/50 border border-crafting-verde/40 text-crafting-branco/90 rounded-lg backdrop-blur-sm hover:bg-crafting-grafite/70 hover:border-crafting-azul/60 hover:text-crafting-branco hover:shadow-lg hover:shadow-crafting-azul/10 hover:-translate-y-0.5 active:translate-y-0",
         ghost: 
           "text-crafting-cinzaAlvo rounded-lg hover:bg-crafting-azul/10 hover:text-crafting-branco",
         link: 

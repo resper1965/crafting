@@ -21,7 +21,7 @@ export default function MapEmbed({ address, className = '' }: MapEmbedProps) {
     <div className={`relative w-full h-[400px] rounded-sm overflow-hidden border border-crafting-verde/10 ${className}`}>
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center bg-crafting-grafite">
-          <div className="text-crafting-cinzaAlvo/60 font-light text-sm">Carregando mapa...</div>
+          <div className="text-crafting-branco/80 font-light text-sm">Carregando mapa...</div>
         </div>
       )}
       <iframe

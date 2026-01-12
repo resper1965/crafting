@@ -12,7 +12,7 @@ export default function PoliticaPrivacidadeClient() {
           <div className="max-w-3xl mx-auto">
             <h1 className="mb-12 font-light tracking-tight">Política de Privacidade</h1>
             
-            <div className="space-y-8 text-crafting-cinzaAlvo/70 leading-relaxed font-light">
+            <div className="space-y-8 text-crafting-branco/90 leading-relaxed font-light">
               <AnimatedSection delay={0.1}>
                 <p>
                   A Crafting Solutions respeita a privacidade dos usuários e está comprometida com a proteção de dados pessoais de acordo com a Lei Geral de Proteção de Dados (LGPD).
