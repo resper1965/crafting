@@ -10,15 +10,14 @@ const config: Config = {
   theme: {
   	extend: {
   		colors: {
-  			// Cores do Manual de Marca - Crafting Partners
   			crafting: {
-  				grafite: '#232b2f',      // Grafite Noturno
-  				azul: '#28474f',         // Azul Profundo
-  				verde: '#4e5655',        // Verde Aço
-  				cinzaAlvo: '#d3d4cc',    // Cinza Alvo
-  				cinzaUrbano: '#939393',  // Cinza Urbano
-  				branco: '#f9fbfd',        // Branco Neve
-  				chumbo: '#1e1d24',       // Chumbo Mineral
+  				grafite: '#232b2f',
+  				azul: '#28474f',
+  				verde: '#4e5655',
+  				cinzaAlvo: '#d3d4cc',
+  				cinzaUrbano: '#939393',
+  				branco: '#f9fbfd',
+  				chumbo: '#1e1d24'
   			},
   			primary: {
   				'50': '#e6f7ff',
@@ -26,9 +25,9 @@ const config: Config = {
   				'200': '#91d5ff',
   				'300': '#69c0ff',
   				'400': '#40a9ff',
-  				'500': '#28474f',        // Azul Profundo do manual
-  				'600': '#232b2f',        // Grafite Noturno
-  				'700': '#1e1d24',        // Chumbo Mineral
+  				'500': '#28474f',
+  				'600': '#232b2f',
+  				'700': '#1e1d24',
   				'800': '#1a1a1a',
   				'900': '#0f0f0f',
   				DEFAULT: 'hsl(var(--primary))',
@@ -85,6 +84,28 @@ const config: Config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		keyframes: {
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
+  			}
+  		},
+  		animation: {
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out'
   		}
   	}
   },

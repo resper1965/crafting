@@ -3,6 +3,8 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Separator } from '@/components/ui/separator'
 import { AnimatedSection, AnimatedCard } from '@/components/AnimatedSection'
 import { AnimatedText } from '@/components/AnimatedText'
 import { motion } from 'framer-motion'
@@ -55,6 +57,12 @@ export default function HomeClient() {
         <div className="container-custom relative z-10">
           <AnimatedSection>
             <div className="max-w-3xl mb-20">
+              <div className="flex items-center gap-4 mb-8">
+                <Badge variant="outline" className="border-crafting-azul/30 text-crafting-azul bg-crafting-azul/10 font-light px-4 py-1.5 rounded-full">
+                  Nossos Serviços
+                </Badge>
+                <Separator className="flex-1 bg-crafting-verde/20" />
+              </div>
               <h2 className="mb-8 font-light tracking-tight">O que fazemos</h2>
               <p className="text-lg md:text-xl text-crafting-cinzaAlvo/80 leading-relaxed font-light mb-4">
                 Localizamos oportunidades nas situações de estresse enfrentadas por empresas dos mais variados ramos de atividade.
@@ -73,9 +81,14 @@ export default function HomeClient() {
                   <div className="absolute inset-0 bg-gradient-to-br from-crafting-azul/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
                   <CardHeader className="relative z-10 pb-6">
-                    <CardTitle className="text-crafting-branco text-xl md:text-2xl font-light tracking-tight group-hover:text-crafting-azul transition-colors duration-300">
-                      {service.title}
-                    </CardTitle>
+                    <div className="flex items-start justify-between gap-4 mb-2">
+                      <CardTitle className="text-crafting-branco text-xl md:text-2xl font-light tracking-tight group-hover:text-crafting-azul transition-colors duration-300 flex-1">
+                        {service.title}
+                      </CardTitle>
+                      <Badge variant="outline" className="border-crafting-azul/20 text-crafting-azul/70 bg-crafting-azul/5 font-light shrink-0">
+                        {index + 1}
+                      </Badge>
+                    </div>
                   </CardHeader>
                   <CardContent className="relative z-10">
                     <CardDescription className="text-crafting-cinzaAlvo/70 leading-relaxed font-light text-base group-hover:text-crafting-cinzaAlvo/90 transition-colors duration-300">
@@ -97,6 +110,9 @@ export default function HomeClient() {
         <div className="container-custom relative z-10">
           <AnimatedSection>
             <div className="max-w-4xl mx-auto text-center">
+              <Badge variant="outline" className="border-crafting-azul/30 text-crafting-azul bg-crafting-azul/10 font-light px-4 py-1.5 rounded-full mb-6">
+                Sobre Nós
+              </Badge>
               <h2 className="mb-12 font-light tracking-tight">Quem somos</h2>
               <p className="text-xl md:text-2xl text-crafting-cinzaAlvo/80 mb-8 leading-relaxed font-light">
                 Especialistas em soluções estratégicas para empresas em estresse e transformação — preservando valor e destravando crescimento.
@@ -126,6 +142,9 @@ export default function HomeClient() {
         <div className="container-custom relative z-10">
           <AnimatedSection>
             <div className="max-w-4xl mx-auto text-center">
+              <Badge variant="outline" className="border-crafting-azul/30 text-crafting-azul bg-crafting-azul/10 font-light px-4 py-1.5 rounded-full mb-6">
+                Entre em Contato
+              </Badge>
               <h2 className="mb-10 font-light tracking-tight">Soluções em Reestruturação, Turnaround e Governança</h2>
               <p className="text-xl md:text-2xl text-crafting-cinzaAlvo/80 mb-8 leading-relaxed font-light">
                 Transformamos desafios em oportunidades únicas de investimentos.
