@@ -110,12 +110,13 @@
 }
 
 @layer components {
+  /* Botões modernizados - mantidos para compatibilidade, mas agora usando o componente Button */
   .btn-primary {
-    @apply bg-crafting-azul text-crafting-branco px-6 py-3 rounded-lg font-medium hover:bg-crafting-verde transition-all duration-300 hover:scale-[1.02] active:scale-[0.98];
+    @apply bg-crafting-azul text-crafting-branco px-6 py-3 rounded-lg font-light tracking-wide shadow-lg shadow-crafting-azul/20 hover:bg-crafting-azul/90 hover:shadow-xl hover:shadow-crafting-azul/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300;
   }
   
   .btn-secondary {
-    @apply border border-crafting-verde text-crafting-cinzaAlvo px-6 py-3 rounded-lg font-medium hover:border-crafting-azul hover:text-crafting-branco transition-all duration-300 hover:scale-[1.02] active:scale-[0.98];
+    @apply border border-crafting-verde/30 bg-transparent text-crafting-cinzaAlvo px-6 py-3 rounded-lg font-light tracking-wide backdrop-blur-sm hover:border-crafting-azul/50 hover:bg-crafting-azul/10 hover:text-crafting-branco hover:shadow-lg hover:shadow-crafting-azul/10 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300;
   }
   
   .section-padding {

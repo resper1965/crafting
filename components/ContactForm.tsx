@@ -175,7 +175,8 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-crafting-azul hover:bg-crafting-azul/90 text-crafting-branco font-light tracking-wide rounded-sm px-8 py-6 h-auto transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          size="lg"
+          className="w-full"
         >
           {isSubmitting ? (
             <>

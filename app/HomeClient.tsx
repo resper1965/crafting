@@ -34,8 +34,7 @@ export default function HomeClient() {
             <AnimatedText delay={0.4}>
               <Button 
                 asChild 
-                size="lg" 
-                className="bg-crafting-azul hover:bg-crafting-azul/90 text-crafting-branco font-light tracking-wide rounded-sm px-8 py-6 h-auto transition-all duration-300 hover:scale-105 active:scale-95"
+                size="lg"
               >
                 <Link href="/contato">Saiba mais</Link>
               </Button>
@@ -103,8 +102,8 @@ export default function HomeClient() {
               >
                 <Button 
                   asChild 
-                  variant="outline" 
-                  className="border-crafting-verde/30 text-crafting-cinzaAlvo hover:bg-crafting-azul hover:border-crafting-azul hover:text-crafting-branco font-light tracking-wide rounded-sm px-8 py-6 h-auto transition-all duration-300"
+                  variant="outline"
+                  size="lg"
                 >
                   <Link href="/quem-somos">Saiba mais</Link>
                 </Button>
@@ -134,8 +133,7 @@ export default function HomeClient() {
               >
                 <Button 
                   asChild 
-                  size="lg" 
-                  className="bg-crafting-azul hover:bg-crafting-azul/90 text-crafting-branco font-light tracking-wide rounded-sm px-8 py-6 h-auto transition-all duration-300 shadow-lg shadow-crafting-azul/20 hover:shadow-xl hover:shadow-crafting-azul/30"
+                  size="lg"
                 >
                   <Link href="/contato">Entre em contato</Link>
                 </Button>
