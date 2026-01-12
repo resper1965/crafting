@@ -1,11 +1,13 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Navigation() {
+  const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -58,10 +60,21 @@ export default function Navigation() {
               >
                 <Link
                   href={item.href}
-                  className="relative text-crafting-cinzaAlvo hover:text-crafting-branco transition-colors text-sm font-light tracking-wide group"
+                  className={`relative transition-colors text-sm font-light tracking-wide group ${
+                    pathname === item.href
+                      ? 'text-crafting-branco'
+                      : 'text-crafting-cinzaAlvo hover:text-crafting-branco'
+                  }`}
+                  aria-current={pathname === item.href ? 'page' : undefined}
                 >
                   {item.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-crafting-azul transition-all duration-300 group-hover:w-full" />
+                  <span 
+                    className={`absolute bottom-0 left-0 h-[1px] bg-crafting-azul transition-all duration-300 ${
+                      pathname === item.href
+                        ? 'w-full'
+                        : 'w-0 group-hover:w-full'
+                    }`} 
+                  />
                 </Link>
               </motion.div>
             ))}
@@ -120,7 +133,12 @@ export default function Navigation() {
                   <Link
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="block py-3 text-crafting-cinzaAlvo hover:text-crafting-branco transition-colors text-sm font-light"
+                    className={`block py-3 transition-colors text-sm font-light ${
+                      pathname === item.href
+                        ? 'text-crafting-branco font-medium'
+                        : 'text-crafting-cinzaAlvo hover:text-crafting-branco'
+                    }`}
+                    aria-current={pathname === item.href ? 'page' : undefined}
                   >
                     {item.label}
                   </Link>

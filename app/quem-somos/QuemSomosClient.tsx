@@ -1,16 +1,6 @@
-import { Metadata } from 'next'
-import { createMetadata } from '@/lib/metadata'
-import QuemSomosClient from './QuemSomosClient'
+'use client'
 
-export const metadata: Metadata = createMetadata({
-  title: 'Quem Somos',
-  description: 'Especialistas em soluções estratégicas para empresas em estresse e transformação — preservando valor e destravando crescimento. A CRAFTING SOLUTIONS é uma boutique one-stop-shop de advisory financeiro e estratégico.',
-  path: '/quem-somos',
-})
-
-export default function QuemSomos() {
-  return <QuemSomosClient />
-}
+import { AnimatedSection } from '@/components/AnimatedSection'
 
 // Conteúdo extraído do site antigo
 const content = {
@@ -24,7 +14,7 @@ const content = {
   ]
 }
 
-export default function QuemSomos() {
+export default function QuemSomosClient() {
   return (
     <section className="section-padding bg-crafting-grafite relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-crafting-azul/5 to-transparent pointer-events-none" />

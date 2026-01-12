@@ -1,16 +1,11 @@
-import { Metadata } from 'next'
-import { createMetadata } from '@/lib/metadata'
-import ContatoClient from './ContatoClient'
+'use client'
 
-export const metadata: Metadata = createMetadata({
-  title: 'Contato',
-  description: 'Entre em contato com a Crafting Solutions. Rua Alexandre Dumas, 1711, Chácara Santo Antônio, São Paulo. Email: contato@craftingsolutions.com.br | Telefone: (11) 98236-9546',
-  path: '/contato',
-})
+import { Button } from '@/components/ui/button'
+import { MapPin, Mail, Phone } from 'lucide-react'
+import { AnimatedSection, AnimatedCard } from '@/components/AnimatedSection'
+import { motion } from 'framer-motion'
 
-export default function Contato() {
-  return <ContatoClient />
-}
+export default function ContatoClient() {
   return (
     <section className="section-padding bg-crafting-grafite relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-crafting-azul/5 via-transparent to-crafting-verde/5 pointer-events-none" />

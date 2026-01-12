@@ -1,16 +1,13 @@
-import { Metadata } from 'next'
-import { createMetadata } from '@/lib/metadata'
-import HomeClient from './HomeClient'
+'use client'
 
-export const metadata: Metadata = createMetadata({
-  title: 'Soluções em Reestruturação, Turnaround e Governança',
-  description: 'Localizamos oportunidades nas situações de estresse enfrentadas por empresas dos mais variados ramos de atividade. Um time de especialistas em reestruturações complexas com mais de 25 anos de experiência.',
-  path: '/',
-})
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { AnimatedSection, AnimatedCard } from '@/components/AnimatedSection'
+import { AnimatedText } from '@/components/AnimatedText'
+import { motion } from 'framer-motion'
 
-export default function Home() {
-  return <HomeClient />
-}
+export default function HomeClient() {
   return (
     <>
       {/* Hero Section */}
@@ -57,6 +54,9 @@ export default function Home() {
               <h2 className="mb-6 font-light tracking-tight">O que fazemos</h2>
               <p className="text-crafting-cinzaAlvo/80 leading-relaxed font-light">
                 Localizamos oportunidades nas situações de estresse enfrentadas por empresas dos mais variados ramos de atividade.
+              </p>
+              <p className="text-crafting-cinzaAlvo/70 leading-relaxed font-light mt-4">
+                Transformamos desafios em oportunidades únicas de investimentos.
               </p>
             </div>
           </AnimatedSection>

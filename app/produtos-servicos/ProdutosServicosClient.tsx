@@ -1,16 +1,9 @@
-import { Metadata } from 'next'
-import { createMetadata } from '@/lib/metadata'
-import ProdutosServicosClient from './ProdutosServicosClient'
+'use client'
 
-export const metadata: Metadata = createMetadata({
-  title: 'Produtos & Serviços',
-  description: 'Transformamos desafios em oportunidades únicas de investimentos. Diagnósticos estratégicos, planos de reestruturação, gestão e governança, e soluções de capital.',
-  path: '/produtos-servicos',
-})
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { AnimatedSection, AnimatedCard } from '@/components/AnimatedSection'
 
-export default function ProdutosServicos() {
-  return <ProdutosServicosClient />
-}
+export default function ProdutosServicosClient() {
   // Serviços baseados no conteúdo extraído (títulos das subpáginas)
   const services = [
     {
