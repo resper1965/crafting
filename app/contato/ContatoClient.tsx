@@ -104,43 +104,33 @@ export default function ContatoClient() {
               
               {/* Links alternativos */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                <Button
+                  asChild
+                  variant="outline"
+                  className="w-full"
                 >
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="w-full border-crafting-verde/20 text-crafting-cinzaAlvo hover:bg-crafting-azul hover:border-crafting-azul hover:text-crafting-branco font-light tracking-wide rounded-sm transition-all duration-300"
+                  <a
+                    href={`https://waze.com/ul?q=${encodeURIComponent(SITE_CONFIG.address.full)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <a
-                      href="https://waze.com/ul?q=Rua%20Alexandre%20Dumas,%201711,%20Chácara%20Santo%20Antônio,%20São%20Paulo"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Abrir no Waze
-                    </a>
-                  </Button>
-                </motion.div>
+                    Abrir no Waze
+                  </a>
+                </Button>
                 
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                <Button
+                  asChild
+                  variant="outline"
+                  className="w-full"
                 >
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="w-full border-crafting-verde/20 text-crafting-cinzaAlvo hover:bg-crafting-azul hover:border-crafting-azul hover:text-crafting-branco font-light tracking-wide rounded-sm transition-all duration-300"
+                  <a
+                    href={`https://maps.google.com/?q=${encodeURIComponent(SITE_CONFIG.address.full)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <a
-                      href="https://maps.google.com/?q=Rua+Alexandre+Dumas,+1711,+Chácara+Santo+Antônio,+São+Paulo"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Abrir no Google Maps
-                    </a>
-                  </Button>
-                </motion.div>
+                    Abrir no Google Maps
+                  </a>
+                </Button>
               </div>
             </div>
           </AnimatedSection>
