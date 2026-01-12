@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button'
 import { MapPin, Mail, Phone } from 'lucide-react'
 import { AnimatedSection, AnimatedCard } from '@/components/AnimatedSection'
 import { motion } from 'framer-motion'
+import MapEmbed from '@/components/MapEmbed'
+import ContactForm from '@/components/ContactForm'
 
 export default function ContatoClient() {
   return (
@@ -15,9 +17,17 @@ export default function ContatoClient() {
           <h1 className="mb-16 font-light tracking-tight">Contato</h1>
         </AnimatedSection>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-4xl mx-auto">
-          {/* Informações de Contato */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
+          {/* Formulário de Contato */}
           <AnimatedSection delay={0.1}>
+            <div>
+              <h2 className="mb-8 text-xl font-light tracking-tight">Envie sua mensagem</h2>
+              <ContactForm />
+            </div>
+          </AnimatedSection>
+
+          {/* Informações de Contato */}
+          <AnimatedSection delay={0.2}>
             <div className="space-y-10">
               <div>
                 <h2 className="mb-8 text-xl font-light tracking-tight">Entre em contato</h2>
@@ -77,12 +87,26 @@ export default function ContatoClient() {
             </div>
           </AnimatedSection>
 
-          {/* Como chegar */}
-          <AnimatedSection delay={0.2}>
-            <div>
-              <h2 className="mb-8 text-xl font-light tracking-tight">Como chegar</h2>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+
+        {/* Mapa e Como chegar - Seção separada */}
+        <div className="max-w-4xl mx-auto mt-16">
+          <AnimatedSection delay={0.3}>
+            <div className="space-y-8">
+              <h2 className="text-xl font-light tracking-tight">Como chegar</h2>
               
-              <div className="space-y-3">
+              {/* Mapa Interativo */}
+              <div className="mb-6">
+                <MapEmbed 
+                  address="Rua Alexandre Dumas, 1711, Chácara Santo Antônio, São Paulo, SP, 04717-911"
+                />
+              </div>
+              
+              {/* Links alternativos */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
