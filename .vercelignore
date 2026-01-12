@@ -1,0 +1,8 @@
+# Arquivos que não devem ser enviados para Vercel
+node_modules
+.next
+.env*.local
+*.log
+.DS_Store
+Transferencia..code-workspace
+ANALISE_CRITICA.md
