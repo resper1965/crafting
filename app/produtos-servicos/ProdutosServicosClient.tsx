@@ -20,17 +20,20 @@ export default function ProdutosServicosClient() {
           </div>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {SERVICES.map((service, index) => (
             <AnimatedCard key={index} delay={index * 0.1}>
-              <Card className="group bg-crafting-chumbo border-crafting-verde/10 hover:border-crafting-azul/40 transition-all duration-500 rounded-sm hover:shadow-lg hover:shadow-crafting-azul/10">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-crafting-azul group-hover:text-crafting-branco transition-colors duration-300 text-lg font-light tracking-tight">
+              <Card className="group relative bg-crafting-chumbo/80 border-crafting-verde/20 hover:border-crafting-azul/50 transition-all duration-500 hover:shadow-2xl hover:shadow-crafting-azul/20 hover:-translate-y-2 backdrop-blur-sm overflow-hidden">
+                {/* Gradiente sutil no hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-crafting-azul/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <CardHeader className="relative z-10 pb-6">
+                  <CardTitle className="text-crafting-azul group-hover:text-crafting-branco transition-colors duration-300 text-xl md:text-2xl font-light tracking-tight">
                     {service.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-crafting-cinzaAlvo/70 group-hover:text-crafting-cinzaAlvo/90 leading-relaxed font-light text-sm transition-colors duration-300">
+                <CardContent className="relative z-10">
+                  <CardDescription className="text-crafting-cinzaAlvo/70 group-hover:text-crafting-cinzaAlvo/90 leading-relaxed font-light text-base transition-colors duration-300">
                     {service.description}
                   </CardDescription>
                 </CardContent>

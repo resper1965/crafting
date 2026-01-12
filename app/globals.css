@@ -35,11 +35,11 @@
   }
   
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl font-light leading-[1.1] tracking-tight;
+    @apply text-5xl md:text-6xl lg:text-7xl font-light leading-[1.05] tracking-tight;
   }
   
   h2 {
-    @apply text-3xl md:text-4xl font-light leading-tight tracking-tight;
+    @apply text-4xl md:text-5xl lg:text-6xl font-light leading-tight tracking-tight;
   }
   
   h3 {
@@ -120,7 +120,11 @@
   }
   
   .section-padding {
-    @apply py-20 md:py-32 px-4 md:px-8;
+    @apply py-24 md:py-40 px-4 md:px-8;
+  }
+  
+  .hero-padding {
+    @apply py-32 md:py-48 px-4 md:px-8;
   }
   
   .container-custom {
