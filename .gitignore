@@ -33,6 +33,7 @@ yarn-error.log*
 
 # crawler output
 crawler/out/
+crawler/node_modules/
 
 # typescript
 *.tsbuildinfo
