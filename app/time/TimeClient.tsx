@@ -1,12 +1,11 @@
 'use client'
 
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { TEAM_MEMBERS } from '@/lib/constants'
 
-// Conteúdo extraído do site antigo
 const content = {
   h1: 'Time',
-  h2: ['Eduardo Matias', 'Leonardo Morato'],
-  text: 'Um time de especialistas em reestruturações complexas com mais de 25 anos de experiência e participação ativa em diferentes projetos.'
+  text: 'Um time de especialistas em reestruturações complexas com mais de 25 anos de experiência e participação ativa em diferentes projetos.',
 }
 
 export default function TimeClient() {
@@ -26,16 +25,16 @@ export default function TimeClient() {
                 </p>
               </AnimatedSection>
               
-              {content.h2.length > 0 && (
+              {TEAM_MEMBERS.length > 0 && (
                 <AnimatedSection delay={0.2}>
                   <div className="space-y-8 mt-12">
-                    {content.h2.map((member, index) => (
-                      <div key={index} className="border-t border-crafting-verde/10 pt-8">
+                    {TEAM_MEMBERS.map((member, index) => (
+                      <div key={member.name} className="border-t border-crafting-verde/10 pt-8">
                         <h2 className="text-2xl text-crafting-branco mb-4 font-light tracking-tight">
-                          {member}
+                          {member.name}
                         </h2>
                         <p className="text-crafting-cinzaAlvo/70 leading-relaxed font-light">
-                          {/* Informações adicionais dos membros podem ser adicionadas aqui quando disponíveis */}
+                          {member.role}
                         </p>
                       </div>
                     ))}

@@ -19,13 +19,7 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const navItems = [
-    { href: '/', label: 'Home' },
-    { href: '/quem-somos', label: 'Quem Somos' },
-    { href: '/produtos-servicos', label: 'Produtos & Serviços' },
-    { href: '/time', label: 'Time' },
-    { href: '/contato', label: 'Contato' },
-  ]
+  const navItems = NAV_ITEMS
 
   return (
     <motion.nav 
@@ -37,6 +31,8 @@ export default function Navigation() {
           ? 'bg-crafting-grafite/98 backdrop-blur-xl border-b border-crafting-verde/20 shadow-lg shadow-crafting-grafite/50' 
           : 'bg-crafting-grafite/95 backdrop-blur-md border-b border-crafting-verde/10'
       }`}
+      role="navigation"
+      aria-label="Navegação principal"
     >
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
@@ -83,8 +79,10 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <motion.button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-crafting-cinzaAlvo hover:text-crafting-branco transition-colors p-2"
-            aria-label="Toggle menu"
+            className="md:hidden text-crafting-cinzaAlvo hover:text-crafting-branco transition-colors p-2 focus:outline-none focus:ring-2 focus:ring-crafting-azul focus:ring-offset-2 focus:ring-offset-crafting-grafite rounded-sm"
+            aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
             whileTap={{ scale: 0.9 }}
           >
             <AnimatePresence mode="wait">
@@ -117,11 +115,13 @@ export default function Navigation() {
         <AnimatePresence>
           {isOpen && (
             <motion.div
+              id="mobile-menu"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
               className="md:hidden border-t border-crafting-verde/10 py-6 space-y-1 overflow-hidden"
+              role="menu"
             >
               {navItems.map((item, index) => (
                 <motion.div

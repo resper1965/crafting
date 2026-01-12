@@ -6,6 +6,7 @@ import { AnimatedSection, AnimatedCard } from '@/components/AnimatedSection'
 import { motion } from 'framer-motion'
 import MapEmbed from '@/components/MapEmbed'
 import ContactForm from '@/components/ContactForm'
+import { SITE_CONFIG } from '@/lib/constants'
 
 export default function ContatoClient() {
   return (
@@ -43,9 +44,9 @@ export default function ContatoClient() {
                       <h3 className="text-crafting-branco font-light text-sm tracking-wide uppercase">Endereço</h3>
                     </div>
                     <p className="text-crafting-cinzaAlvo/70 font-light leading-relaxed text-sm pl-7">
-                      Rua Alexandre Dumas, 1711<br />
-                      Chácara Santo Antônio<br />
-                      São Paulo, SP, 04717-911
+                      {SITE_CONFIG.address.street}<br />
+                      {SITE_CONFIG.address.neighborhood}<br />
+                      {SITE_CONFIG.address.city}, {SITE_CONFIG.address.state}, {SITE_CONFIG.address.zipCode}
                     </p>
                   </motion.div>
                   
@@ -59,10 +60,10 @@ export default function ContatoClient() {
                       <h3 className="text-crafting-branco font-light text-sm tracking-wide uppercase">Email</h3>
                     </div>
                     <a
-                      href="mailto:contato@craftingsolutions.com.br"
+                      href={`mailto:${SITE_CONFIG.email}`}
                       className="text-crafting-cinzaAlvo/70 hover:text-crafting-branco transition-colors font-light text-sm pl-7 block"
                     >
-                      contato@craftingsolutions.com.br
+                      {SITE_CONFIG.email}
                     </a>
                   </motion.div>
                   
@@ -76,10 +77,10 @@ export default function ContatoClient() {
                       <h3 className="text-crafting-branco font-light text-sm tracking-wide uppercase">Telefone</h3>
                     </div>
                     <a
-                      href="tel:+5511982369546"
+                      href={`tel:${SITE_CONFIG.phone.replace(/\s/g, '')}`}
                       className="text-crafting-cinzaAlvo/70 hover:text-crafting-branco transition-colors font-light text-sm pl-7 block"
                     >
-                      (11) 98236-9546
+                      {SITE_CONFIG.phone}
                     </a>
                   </motion.div>
                 </div>
@@ -97,7 +98,7 @@ export default function ContatoClient() {
               {/* Mapa Interativo */}
               <div className="mb-6">
                 <MapEmbed 
-                  address="Rua Alexandre Dumas, 1711, Chácara Santo Antônio, São Paulo, SP, 04717-911"
+                  address={SITE_CONFIG.address.full}
                 />
               </div>
               

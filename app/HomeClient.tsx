@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { AnimatedSection, AnimatedCard } from '@/components/AnimatedSection'
 import { AnimatedText } from '@/components/AnimatedText'
 import { motion } from 'framer-motion'
+import { SERVICES } from '@/lib/constants'
 
 export default function HomeClient() {
   return (

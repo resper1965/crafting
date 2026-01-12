@@ -6,7 +6,8 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
-import { Loader2, CheckCircle2, AlertCircle } from 'lucide-react'
+import { Loader2 } from 'lucide-react'
+import { useToast } from '@/components/ui/use-toast'
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Nome deve ter pelo menos 2 caracteres'),
@@ -24,8 +25,7 @@ interface ContactFormProps {
 
 export default function ContactForm({ className = '' }: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-  const [submitMessage, setSubmitMessage] = useState('')
+  const { toast } = useToast()
 
   const {
     register,
@@ -38,8 +38,6 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true)
-    setSubmitStatus('idle')
-    setSubmitMessage('')
 
     try {
       const response = await fetch('/api/contact', {
@@ -53,16 +51,25 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
       const result = await response.json()
 
       if (response.ok) {
-        setSubmitStatus('success')
-        setSubmitMessage('Mensagem enviada com sucesso! Entraremos em contato em breve.')
+        toast({
+          title: 'Mensagem enviada!',
+          description: 'Entraremos em contato em breve.',
+          variant: 'default',
+        })
         reset()
       } else {
-        setSubmitStatus('error')
-        setSubmitMessage(result.error || 'Erro ao enviar mensagem. Tente novamente.')
+        toast({
+          title: 'Erro ao enviar',
+          description: result.error || 'Tente novamente mais tarde.',
+          variant: 'destructive',
+        })
       }
     } catch (error) {
-      setSubmitStatus('error')
-      setSubmitMessage('Erro ao enviar mensagem. Tente novamente mais tarde.')
+      toast({
+        title: 'Erro ao enviar',
+        description: 'Erro ao enviar mensagem. Tente novamente mais tarde.',
+        variant: 'destructive',
+      })
     } finally {
       setIsSubmitting(false)
     }
@@ -159,26 +166,6 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
           <p className="mt-1 text-sm text-red-400 font-light">{errors.message.message}</p>
         )}
       </div>
-
-      {/* Status Message */}
-      {submitStatus !== 'idle' && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className={`flex items-center gap-3 p-4 rounded-sm border ${
-            submitStatus === 'success'
-              ? 'bg-crafting-verde/10 border-crafting-verde/30 text-crafting-verde'
-              : 'bg-red-500/10 border-red-500/30 text-red-400'
-          }`}
-        >
-          {submitStatus === 'success' ? (
-            <CheckCircle2 className="w-5 h-5 stroke-[1.5]" />
-          ) : (
-            <AlertCircle className="w-5 h-5 stroke-[1.5]" />
-          )}
-          <p className="text-sm font-light">{submitMessage}</p>
-        </motion.div>
-      )}
 
       {/* Submit Button */}
       <motion.div

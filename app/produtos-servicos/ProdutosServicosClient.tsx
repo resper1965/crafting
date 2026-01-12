@@ -2,30 +2,9 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { AnimatedSection, AnimatedCard } from '@/components/AnimatedSection'
+import { SERVICES } from '@/lib/constants'
 
 export default function ProdutosServicosClient() {
-  // Serviços baseados no conteúdo extraído (títulos das subpáginas)
-  const services = [
-    {
-      title: 'Diagnósticos estratégicos e operacionais',
-      description: 'Transformamos desafios em oportunidades únicas de investimentos.',
-    },
-    {
-      title: 'Planos de reestruturação',
-      description: 'Transformamos desafios em oportunidades únicas de investimentos.',
-    },
-    {
-      title: 'Gestão e governança',
-      description: 'Transformamos desafios em oportunidades únicas de investimentos.',
-    },
-    {
-      title: 'Soluções de capital',
-      description: 'Transformamos desafios em oportunidades únicas de investimentos.',
-    },
-  ]
-  
-  // Nota: As subpáginas extraídas têm conteúdo mínimo (7 palavras).
-  // O conteúdo atual preserva a mensagem principal encontrada.
 
   return (
     <section className="section-padding bg-crafting-grafite relative overflow-hidden">
@@ -42,7 +21,7 @@ export default function ProdutosServicosClient() {
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {services.map((service, index) => (
+          {SERVICES.map((service, index) => (
             <AnimatedCard key={index} delay={index * 0.1}>
               <Card className="group bg-crafting-chumbo border-crafting-verde/10 hover:border-crafting-azul/40 transition-all duration-500 rounded-sm hover:shadow-lg hover:shadow-crafting-azul/10">
                 <CardHeader className="pb-4">

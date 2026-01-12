@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { SITE_CONFIG, NAV_ITEMS } from '@/lib/constants'
 
 export default function Footer() {
   const navItems = [
@@ -59,9 +60,9 @@ export default function Footer() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
               >
-                Rua Alexandre Dumas, 1711<br />
-                Chácara Santo Antônio<br />
-                São Paulo, SP, 04717-911
+                {SITE_CONFIG.address.street}<br />
+                {SITE_CONFIG.address.neighborhood}<br />
+                {SITE_CONFIG.address.city}, {SITE_CONFIG.address.state}, {SITE_CONFIG.address.zipCode}
               </motion.li>
               <motion.li
                 initial={{ opacity: 0, y: 10 }}
@@ -69,8 +70,8 @@ export default function Footer() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
               >
-                <a href="mailto:contato@craftingsolutions.com.br" className="hover:text-crafting-branco transition-colors">
-                  contato@craftingsolutions.com.br
+                <a href={`mailto:${SITE_CONFIG.email}`} className="hover:text-crafting-branco transition-colors">
+                  {SITE_CONFIG.email}
                 </a>
               </motion.li>
               <motion.li
@@ -79,8 +80,8 @@ export default function Footer() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
               >
-                <a href="tel:+5511982369546" className="hover:text-crafting-branco transition-colors">
-                  (11) 98236-9546
+                <a href={`tel:${SITE_CONFIG.phone.replace(/\s/g, '')}`} className="hover:text-crafting-branco transition-colors">
+                  {SITE_CONFIG.phone}
                 </a>
               </motion.li>
             </ul>

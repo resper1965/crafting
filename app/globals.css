@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Skip to content link - Acessibilidade */
+.skip-to-content {
+  @apply absolute -top-20 left-4 z-[100] bg-crafting-azul text-crafting-branco px-4 py-2 rounded-sm font-light text-sm transition-all duration-200 focus:top-4 focus:outline-none focus:ring-2 focus:ring-crafting-azul focus:ring-offset-2 focus:ring-offset-crafting-grafite;
+}
+
 :root {
   --font-roboto: 'Roboto', sans-serif;
   --font-montserrat: 'Montserrat', sans-serif;
