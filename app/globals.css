@@ -27,7 +27,7 @@
   }
 
   body {
-    @apply bg-crafting-grafite text-crafting-cinzaAlvo;
+    @apply bg-crafting-grafite text-crafting-branco;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -47,11 +47,11 @@
   }
   
   p {
-    @apply text-crafting-cinzaAlvo/70 leading-relaxed font-light;
+    @apply text-crafting-branco leading-relaxed font-light;
   }
   
   a {
-    @apply text-crafting-cinzaAlvo/70 hover:text-crafting-branco transition-colors;
+    @apply text-crafting-branco hover:text-crafting-azul transition-colors;
   }
   :root {
     --background: 0 0% 100%;
@@ -116,7 +116,7 @@
   }
   
   .btn-secondary {
-    @apply border border-crafting-verde/30 bg-transparent text-crafting-cinzaAlvo px-6 py-3 rounded-lg font-light tracking-wide backdrop-blur-sm hover:border-crafting-azul/50 hover:bg-crafting-azul/10 hover:text-crafting-branco hover:shadow-lg hover:shadow-crafting-azul/10 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300;
+    @apply border border-crafting-verde/50 bg-transparent text-crafting-branco/90 px-6 py-3 rounded-lg font-light tracking-wide backdrop-blur-sm hover:border-crafting-azul/70 hover:bg-crafting-azul/10 hover:text-crafting-branco hover:shadow-lg hover:shadow-crafting-azul/10 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300;
   }
   
   .section-padding {

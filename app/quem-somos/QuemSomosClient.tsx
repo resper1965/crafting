@@ -56,8 +56,8 @@ export default function QuemSomosClient() {
                   {index > 0 && <Separator className="mb-8 bg-crafting-verde/10" />}
                   <p className={`leading-relaxed font-light ${
                     index === 0 
-                      ? 'text-crafting-cinzaAlvo/80 text-xl md:text-2xl' 
-                      : 'text-crafting-cinzaAlvo/70 text-lg'
+                      ? 'text-crafting-branco text-xl md:text-2xl' 
+                      : 'text-crafting-branco/95 text-lg'
                   }`}>
                     {paragraph}
                   </p>
@@ -66,13 +66,13 @@ export default function QuemSomosClient() {
               
               {content.h2.includes('Diferenciais') && (
                 <AnimatedSection delay={0.5}>
-                  <Separator className="mb-12 bg-crafting-verde/10" />
+                  <Separator className="mb-12 bg-crafting-verde/30" />
                   <div className="mb-8">
                     <Badge variant="outline" className="border-crafting-azul/30 text-crafting-azul bg-crafting-azul/10 font-light px-4 py-1.5 rounded-full mb-6">
                       Diferenciais
                     </Badge>
                     <h2 className="text-3xl md:text-4xl text-crafting-branco mb-6 font-light tracking-tight">Nossos Diferenciais</h2>
-                    <p className="text-crafting-cinzaAlvo/70 leading-relaxed font-light text-lg mb-8">
+                    <p className="text-crafting-branco/95 leading-relaxed font-light text-lg mb-8">
                       Nossos diferenciais asseguram consistência em cada etapa e alinhamento integral com os objetivos de clientes e investidores.
                     </p>
                   </div>
@@ -82,12 +82,12 @@ export default function QuemSomosClient() {
                       <AccordionItem 
                         key={diferencial.title}
                         value={`item-${index}`}
-                        className="border-crafting-verde/20 bg-crafting-grafite/50 rounded-xl px-6 py-2 data-[state=open]:bg-crafting-grafite/80 transition-colors"
+                        className="border-crafting-verde/40 bg-crafting-grafite/60 rounded-xl px-6 py-2 data-[state=open]:bg-crafting-grafite/90 transition-colors"
                       >
                         <AccordionTrigger className="text-crafting-branco font-light text-lg hover:no-underline hover:text-crafting-azul transition-colors">
                           {diferencial.title}
                         </AccordionTrigger>
-                        <AccordionContent className="text-crafting-cinzaAlvo/70 leading-relaxed font-light pt-2">
+                        <AccordionContent className="text-crafting-branco/90 leading-relaxed font-light pt-2">
                           {diferencial.description}
                         </AccordionContent>
                       </AccordionItem>

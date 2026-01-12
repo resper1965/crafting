@@ -27,14 +27,14 @@ export default function TimeClient() {
             
             <div className="space-y-12">
               <AnimatedSection delay={0.1}>
-                <p className="text-xl md:text-2xl text-crafting-cinzaAlvo/80 leading-relaxed font-light">
+                <p className="text-xl md:text-2xl text-crafting-branco leading-relaxed font-light">
                   {content.text}
                 </p>
               </AnimatedSection>
               
               {TEAM_MEMBERS.length > 0 && (
                 <AnimatedSection delay={0.2}>
-                  <Separator className="bg-crafting-verde/20" />
+                  <Separator className="bg-crafting-verde/40" />
                   <div className="space-y-12 mt-12">
                     {TEAM_MEMBERS.map((member, index) => (
                       <div key={member.name} className="group">
@@ -49,7 +49,7 @@ export default function TimeClient() {
                           </div>
                         </div>
                         {index < TEAM_MEMBERS.length - 1 && (
-                          <Separator className="mt-8 bg-crafting-verde/10" />
+                          <Separator className="mt-8 bg-crafting-verde/30" />
                         )}
                       </div>
                     ))}

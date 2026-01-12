@@ -79,14 +79,14 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
     <form onSubmit={handleSubmit(onSubmit)} className={`space-y-6 ${className}`}>
       {/* Nome */}
       <div>
-        <label htmlFor="name" className="block text-sm font-light text-crafting-cinzaAlvo/80 mb-2">
+        <label htmlFor="name" className="block text-sm font-light text-crafting-branco/90 mb-2">
           Nome *
         </label>
         <input
           id="name"
           type="text"
           {...register('name')}
-          className="w-full px-4 py-3 bg-crafting-chumbo border border-crafting-verde/20 rounded-sm text-crafting-branco font-light placeholder-crafting-cinzaAlvo/40 focus:outline-none focus:border-crafting-azul focus:ring-1 focus:ring-crafting-azul transition-colors"
+          className="w-full px-4 py-3 bg-crafting-chumbo border border-crafting-verde/40 rounded-sm text-crafting-branco font-light placeholder-crafting-cinzaAlvo/60 focus:outline-none focus:border-crafting-azul focus:ring-2 focus:ring-crafting-azul transition-colors"
           placeholder="Seu nome completo"
           disabled={isSubmitting}
         />
@@ -97,14 +97,14 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
 
       {/* Email */}
       <div>
-        <label htmlFor="email" className="block text-sm font-light text-crafting-cinzaAlvo/80 mb-2">
+        <label htmlFor="email" className="block text-sm font-light text-crafting-branco/90 mb-2">
           Email *
         </label>
         <input
           id="email"
           type="email"
           {...register('email')}
-          className="w-full px-4 py-3 bg-crafting-chumbo border border-crafting-verde/20 rounded-sm text-crafting-branco font-light placeholder-crafting-cinzaAlvo/40 focus:outline-none focus:border-crafting-azul focus:ring-1 focus:ring-crafting-azul transition-colors"
+          className="w-full px-4 py-3 bg-crafting-chumbo border border-crafting-verde/40 rounded-sm text-crafting-branco font-light placeholder-crafting-cinzaAlvo/60 focus:outline-none focus:border-crafting-azul focus:ring-2 focus:ring-crafting-azul transition-colors"
           placeholder="seu@email.com"
           disabled={isSubmitting}
         />
@@ -115,14 +115,14 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
 
       {/* Telefone */}
       <div>
-        <label htmlFor="phone" className="block text-sm font-light text-crafting-cinzaAlvo/80 mb-2">
+        <label htmlFor="phone" className="block text-sm font-light text-crafting-branco/90 mb-2">
           Telefone
         </label>
         <input
           id="phone"
           type="tel"
           {...register('phone')}
-          className="w-full px-4 py-3 bg-crafting-chumbo border border-crafting-verde/20 rounded-sm text-crafting-branco font-light placeholder-crafting-cinzaAlvo/40 focus:outline-none focus:border-crafting-azul focus:ring-1 focus:ring-crafting-azul transition-colors"
+          className="w-full px-4 py-3 bg-crafting-chumbo border border-crafting-verde/40 rounded-sm text-crafting-branco font-light placeholder-crafting-cinzaAlvo/60 focus:outline-none focus:border-crafting-azul focus:ring-2 focus:ring-crafting-azul transition-colors"
           placeholder="(11) 99999-9999"
           disabled={isSubmitting}
         />
@@ -133,14 +133,14 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
 
       {/* Assunto */}
       <div>
-        <label htmlFor="subject" className="block text-sm font-light text-crafting-cinzaAlvo/80 mb-2">
+        <label htmlFor="subject" className="block text-sm font-light text-crafting-branco/90 mb-2">
           Assunto *
         </label>
         <input
           id="subject"
           type="text"
           {...register('subject')}
-          className="w-full px-4 py-3 bg-crafting-chumbo border border-crafting-verde/20 rounded-sm text-crafting-branco font-light placeholder-crafting-cinzaAlvo/40 focus:outline-none focus:border-crafting-azul focus:ring-1 focus:ring-crafting-azul transition-colors"
+          className="w-full px-4 py-3 bg-crafting-chumbo border border-crafting-verde/40 rounded-sm text-crafting-branco font-light placeholder-crafting-cinzaAlvo/60 focus:outline-none focus:border-crafting-azul focus:ring-2 focus:ring-crafting-azul transition-colors"
           placeholder="Assunto da mensagem"
           disabled={isSubmitting}
         />
@@ -151,14 +151,14 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
 
       {/* Mensagem */}
       <div>
-        <label htmlFor="message" className="block text-sm font-light text-crafting-cinzaAlvo/80 mb-2">
+        <label htmlFor="message" className="block text-sm font-light text-crafting-branco/90 mb-2">
           Mensagem *
         </label>
         <textarea
           id="message"
           {...register('message')}
           rows={6}
-          className="w-full px-4 py-3 bg-crafting-chumbo border border-crafting-verde/20 rounded-sm text-crafting-branco font-light placeholder-crafting-cinzaAlvo/40 focus:outline-none focus:border-crafting-azul focus:ring-1 focus:ring-crafting-azul transition-colors resize-none"
+          className="w-full px-4 py-3 bg-crafting-chumbo border border-crafting-verde/40 rounded-sm text-crafting-branco font-light placeholder-crafting-cinzaAlvo/60 focus:outline-none focus:border-crafting-azul focus:ring-2 focus:ring-crafting-azul transition-colors resize-none"
           placeholder="Sua mensagem..."
           disabled={isSubmitting}
         />

@@ -20,10 +20,10 @@ export default function ProdutosServicosClient() {
               Nossas Soluções
             </Badge>
             <h1 className="mb-8 font-light tracking-tight">Produtos & Serviços</h1>
-            <p className="text-lg md:text-xl text-crafting-cinzaAlvo/80 leading-relaxed font-light">
+            <p className="text-lg md:text-xl text-crafting-branco leading-relaxed font-light">
               Transformamos desafios em oportunidades únicas de investimentos.
             </p>
-            <Separator className="mt-8 bg-crafting-verde/20" />
+            <Separator className="mt-8 bg-crafting-verde/40" />
           </div>
         </AnimatedSection>
 

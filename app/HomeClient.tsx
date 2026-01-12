@@ -28,10 +28,10 @@ export default function HomeClient() {
               </h1>
             </AnimatedText>
             <AnimatedText delay={0.2}>
-              <p className="text-xl md:text-2xl text-crafting-cinzaAlvo/90 mb-6 max-w-3xl leading-relaxed font-light">
+              <p className="text-xl md:text-2xl text-crafting-branco mb-6 max-w-3xl leading-relaxed font-light">
                 Localizamos oportunidades nas situações de estresse enfrentadas por empresas dos mais variados ramos de atividade.
               </p>
-              <p className="text-lg md:text-xl text-crafting-cinzaAlvo/80 mb-16 max-w-3xl leading-relaxed font-light">
+              <p className="text-lg md:text-xl text-crafting-branco/95 mb-16 max-w-3xl leading-relaxed font-light">
                 Um time de especialistas em reestruturações complexas com mais de 25 anos de experiência e participação ativa dos sócios em cada projeto.
               </p>
             </AnimatedText>
@@ -61,13 +61,13 @@ export default function HomeClient() {
                 <Badge variant="outline" className="border-crafting-azul/30 text-crafting-azul bg-crafting-azul/10 font-light px-4 py-1.5 rounded-full">
                   Nossos Serviços
                 </Badge>
-                <Separator className="flex-1 bg-crafting-verde/20" />
+                <Separator className="flex-1 bg-crafting-verde/40" />
               </div>
               <h2 className="mb-8 font-light tracking-tight">O que fazemos</h2>
-              <p className="text-lg md:text-xl text-crafting-cinzaAlvo/80 leading-relaxed font-light mb-4">
+              <p className="text-lg md:text-xl text-crafting-branco leading-relaxed font-light mb-4">
                 Localizamos oportunidades nas situações de estresse enfrentadas por empresas dos mais variados ramos de atividade.
               </p>
-              <p className="text-base md:text-lg text-crafting-cinzaAlvo/70 leading-relaxed font-light">
+              <p className="text-base md:text-lg text-crafting-branco/95 leading-relaxed font-light">
                 Transformamos desafios em oportunidades únicas de investimentos.
               </p>
             </div>
@@ -91,7 +91,7 @@ export default function HomeClient() {
                     </div>
                   </CardHeader>
                   <CardContent className="relative z-10">
-                    <CardDescription className="text-crafting-cinzaAlvo/70 leading-relaxed font-light text-base group-hover:text-crafting-cinzaAlvo/90 transition-colors duration-300">
+                    <CardDescription className="text-crafting-branco/90 leading-relaxed font-light text-base group-hover:text-crafting-branco transition-colors duration-300">
                       {service.description}
                     </CardDescription>
                   </CardContent>
@@ -114,10 +114,10 @@ export default function HomeClient() {
                 Sobre Nós
               </Badge>
               <h2 className="mb-12 font-light tracking-tight">Quem somos</h2>
-              <p className="text-xl md:text-2xl text-crafting-cinzaAlvo/80 mb-8 leading-relaxed font-light">
+              <p className="text-xl md:text-2xl text-crafting-branco mb-8 leading-relaxed font-light">
                 Especialistas em soluções estratégicas para empresas em estresse e transformação — preservando valor e destravando crescimento.
               </p>
-              <p className="text-lg md:text-xl text-crafting-cinzaAlvo/70 mb-16 leading-relaxed font-light">
+              <p className="text-lg md:text-xl text-crafting-branco/95 mb-16 leading-relaxed font-light">
                 Um time de especialistas em reestruturações complexas com mais de 25 anos de experiência e participação ativa dos sócios em cada projeto.
               </p>
               <Button 
@@ -146,10 +146,10 @@ export default function HomeClient() {
                 Entre em Contato
               </Badge>
               <h2 className="mb-10 font-light tracking-tight">Soluções em Reestruturação, Turnaround e Governança</h2>
-              <p className="text-xl md:text-2xl text-crafting-cinzaAlvo/80 mb-8 leading-relaxed font-light">
+              <p className="text-xl md:text-2xl text-crafting-branco mb-8 leading-relaxed font-light">
                 Transformamos desafios em oportunidades únicas de investimentos.
               </p>
-              <p className="text-lg md:text-xl text-crafting-cinzaAlvo/70 mb-16 leading-relaxed font-light">
+              <p className="text-lg md:text-xl text-crafting-branco/95 mb-16 leading-relaxed font-light">
                 Localizamos oportunidades nas situações de estresse enfrentadas por empresas dos mais variados ramos de atividade.
               </p>
               <Button 

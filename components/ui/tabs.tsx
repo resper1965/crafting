@@ -14,7 +14,7 @@ const TabsList = React.forwardRef<
   <TabsPrimitive.List
     ref={ref}
       className={cn(
-        "inline-flex h-11 items-center justify-center rounded-xl bg-crafting-grafite/50 border border-crafting-verde/20 p-1.5 backdrop-blur-sm",
+        "inline-flex h-11 items-center justify-center rounded-xl bg-crafting-grafite/50 border border-crafting-verde/40 p-1.5 backdrop-blur-sm",
         className
       )}
     {...props}
@@ -29,7 +29,7 @@ const TabsTrigger = React.forwardRef<
   <TabsPrimitive.Trigger
     ref={ref}
       className={cn(
-        "inline-flex items-center justify-center whitespace-nowrap rounded-lg px-6 py-2 text-sm font-light tracking-wide ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-crafting-azul focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-crafting-azul data-[state=active]:text-crafting-branco data-[state=active]:shadow-lg data-[state=active]:shadow-crafting-azul/20 data-[state=inactive]:text-crafting-cinzaAlvo/70 data-[state=inactive]:hover:text-crafting-branco data-[state=inactive]:hover:bg-crafting-grafite/50",
+        "inline-flex items-center justify-center whitespace-nowrap rounded-lg px-6 py-2 text-sm font-light tracking-wide ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-crafting-azul focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-crafting-azul data-[state=active]:text-crafting-branco data-[state=active]:shadow-lg data-[state=active]:shadow-crafting-azul/20 data-[state=inactive]:text-crafting-branco/90 data-[state=inactive]:hover:text-crafting-branco data-[state=inactive]:hover:bg-crafting-grafite/50",
         className
       )}
     {...props}

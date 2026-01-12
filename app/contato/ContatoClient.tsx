@@ -43,7 +43,7 @@ export default function ContatoClient() {
                       <MapPin className="w-4 h-4 text-crafting-cinzaAlvo/60 mt-1 stroke-[1.5] group-hover:text-crafting-azul transition-colors" />
                       <h3 className="text-crafting-branco font-light text-sm tracking-wide uppercase">Endereço</h3>
                     </div>
-                    <p className="text-crafting-cinzaAlvo/70 font-light leading-relaxed text-sm pl-7">
+                    <p className="text-crafting-branco/90 font-light leading-relaxed text-sm pl-7">
                       {SITE_CONFIG.address.street}<br />
                       {SITE_CONFIG.address.neighborhood}<br />
                       {SITE_CONFIG.address.city}, {SITE_CONFIG.address.state}, {SITE_CONFIG.address.zipCode}
@@ -56,12 +56,12 @@ export default function ContatoClient() {
                     className="group"
                   >
                     <div className="flex items-start gap-3 mb-3">
-                      <Mail className="w-4 h-4 text-crafting-cinzaAlvo/60 mt-1 stroke-[1.5] group-hover:text-crafting-azul transition-colors" />
+                      <Mail className="w-4 h-4 text-crafting-branco/70 mt-1 stroke-[1.5] group-hover:text-crafting-azul transition-colors" />
                       <h3 className="text-crafting-branco font-light text-sm tracking-wide uppercase">Email</h3>
                     </div>
                     <a
                       href={`mailto:${SITE_CONFIG.email}`}
-                      className="text-crafting-cinzaAlvo/70 hover:text-crafting-branco transition-colors font-light text-sm pl-7 block"
+                      className="text-crafting-branco/90 hover:text-crafting-branco transition-colors font-light text-sm pl-7 block"
                     >
                       {SITE_CONFIG.email}
                     </a>
@@ -73,12 +73,12 @@ export default function ContatoClient() {
                     className="group"
                   >
                     <div className="flex items-start gap-3 mb-3">
-                      <Phone className="w-4 h-4 text-crafting-cinzaAlvo/60 mt-1 stroke-[1.5] group-hover:text-crafting-azul transition-colors" />
+                      <Phone className="w-4 h-4 text-crafting-branco/70 mt-1 stroke-[1.5] group-hover:text-crafting-azul transition-colors" />
                       <h3 className="text-crafting-branco font-light text-sm tracking-wide uppercase">Telefone</h3>
                     </div>
                     <a
                       href={`tel:${SITE_CONFIG.phone.replace(/\s/g, '')}`}
-                      className="text-crafting-cinzaAlvo/70 hover:text-crafting-branco transition-colors font-light text-sm pl-7 block"
+                      className="text-crafting-branco/90 hover:text-crafting-branco transition-colors font-light text-sm pl-7 block"
                     >
                       {SITE_CONFIG.phone}
                     </a>

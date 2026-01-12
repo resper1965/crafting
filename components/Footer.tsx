@@ -33,7 +33,7 @@ export default function Footer() {
                 >
                   <Link
                     href={item.href}
-                    className="group relative text-crafting-cinzaAlvo/70 hover:text-crafting-branco transition-colors text-sm font-light inline-block"
+                    className="group relative text-crafting-branco/90 hover:text-crafting-branco transition-colors text-sm font-light inline-block"
                   >
                     {item.label}
                     <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-crafting-azul transition-all duration-300 group-hover:w-full" />
@@ -46,7 +46,7 @@ export default function Footer() {
           {/* Contato */}
           <div>
             <h3 className="font-display text-crafting-branco font-light mb-6 text-sm tracking-wide uppercase">Contato</h3>
-            <ul className="space-y-4 text-crafting-cinzaAlvo/70 text-sm font-light leading-relaxed">
+            <ul className="space-y-4 text-crafting-branco/90 text-sm font-light leading-relaxed">
               <motion.li
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -115,7 +115,7 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="mt-16 pt-8 border-t border-crafting-verde/10 text-center text-crafting-cinzaUrbano/60 text-xs font-light"
+          className="mt-16 pt-8 border-t border-crafting-verde/30 text-center text-crafting-branco/80 text-xs font-light"
         >
           <p>© 2026 Crafting Solutions. Todos os direitos reservados.</p>
         </motion.div>

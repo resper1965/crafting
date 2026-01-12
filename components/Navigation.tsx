@@ -60,7 +60,7 @@ export default function Navigation() {
                   className={`relative transition-colors text-sm font-light tracking-wide group ${
                     pathname === item.href
                       ? 'text-crafting-branco'
-                      : 'text-crafting-cinzaAlvo hover:text-crafting-branco'
+                      : 'text-crafting-branco/90 hover:text-crafting-branco'
                   }`}
                   aria-current={pathname === item.href ? 'page' : undefined}
                 >
@@ -80,7 +80,7 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <motion.button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-crafting-cinzaAlvo hover:text-crafting-branco transition-colors p-2 focus:outline-none focus:ring-2 focus:ring-crafting-azul focus:ring-offset-2 focus:ring-offset-crafting-grafite rounded-sm"
+            className="md:hidden text-crafting-branco/90 hover:text-crafting-branco transition-colors p-2 focus:outline-none focus:ring-2 focus:ring-crafting-azul focus:ring-offset-2 focus:ring-offset-crafting-grafite rounded-sm"
             aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
@@ -121,7 +121,7 @@ export default function Navigation() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden border-t border-crafting-verde/10 py-6 space-y-1 overflow-hidden"
+              className="md:hidden border-t border-crafting-verde/30 py-6 space-y-1 overflow-hidden"
               role="menu"
             >
               {navItems.map((item, index) => (
