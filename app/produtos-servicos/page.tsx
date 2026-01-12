@@ -3,11 +3,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { AnimatedSection, AnimatedCard } from '@/components/AnimatedSection'
 
-'use client'
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { AnimatedSection, AnimatedCard } from '@/components/AnimatedSection'
-
 export default function ProdutosServicos() {
   const services = [
     {
