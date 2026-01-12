@@ -1,23 +1,35 @@
+'use client'
+
 import { Button } from '@/components/ui/button'
 import { MapPin, Mail, Phone } from 'lucide-react'
+import { AnimatedSection, AnimatedCard } from '@/components/AnimatedSection'
+import { motion } from 'framer-motion'
 
 export default function Contato() {
   return (
-    <section className="section-padding bg-crafting-grafite">
-      <div className="container-custom">
-        <div className="max-w-4xl mx-auto">
+    <section className="section-padding bg-crafting-grafite relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-crafting-azul/5 via-transparent to-crafting-verde/5 pointer-events-none" />
+      
+      <div className="container-custom relative z-10">
+        <AnimatedSection>
           <h1 className="mb-16 font-light tracking-tight">Contato</h1>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            {/* Informações de Contato */}
+        </AnimatedSection>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-4xl mx-auto">
+          {/* Informações de Contato */}
+          <AnimatedSection delay={0.1}>
             <div className="space-y-10">
               <div>
                 <h2 className="mb-8 text-xl font-light tracking-tight">Entre em contato</h2>
                 
                 <div className="space-y-8">
-                  <div>
+                  <motion.div
+                    whileHover={{ x: 4 }}
+                    transition={{ duration: 0.2 }}
+                    className="group"
+                  >
                     <div className="flex items-start gap-3 mb-3">
-                      <MapPin className="w-4 h-4 text-crafting-cinzaAlvo/60 mt-1 stroke-[1.5]" />
+                      <MapPin className="w-4 h-4 text-crafting-cinzaAlvo/60 mt-1 stroke-[1.5] group-hover:text-crafting-azul transition-colors" />
                       <h3 className="text-crafting-branco font-light text-sm tracking-wide uppercase">Endereço</h3>
                     </div>
                     <p className="text-crafting-cinzaAlvo/70 font-light leading-relaxed text-sm pl-7">
@@ -25,11 +37,15 @@ export default function Contato() {
                       Chácara Santo Antônio<br />
                       São Paulo, SP, 04717-911
                     </p>
-                  </div>
+                  </motion.div>
                   
-                  <div>
+                  <motion.div
+                    whileHover={{ x: 4 }}
+                    transition={{ duration: 0.2 }}
+                    className="group"
+                  >
                     <div className="flex items-start gap-3 mb-3">
-                      <Mail className="w-4 h-4 text-crafting-cinzaAlvo/60 mt-1 stroke-[1.5]" />
+                      <Mail className="w-4 h-4 text-crafting-cinzaAlvo/60 mt-1 stroke-[1.5] group-hover:text-crafting-azul transition-colors" />
                       <h3 className="text-crafting-branco font-light text-sm tracking-wide uppercase">Email</h3>
                     </div>
                     <a
@@ -38,11 +54,15 @@ export default function Contato() {
                     >
                       contato@craftingsolutions.com.br
                     </a>
-                  </div>
+                  </motion.div>
                   
-                  <div>
+                  <motion.div
+                    whileHover={{ x: 4 }}
+                    transition={{ duration: 0.2 }}
+                    className="group"
+                  >
                     <div className="flex items-start gap-3 mb-3">
-                      <Phone className="w-4 h-4 text-crafting-cinzaAlvo/60 mt-1 stroke-[1.5]" />
+                      <Phone className="w-4 h-4 text-crafting-cinzaAlvo/60 mt-1 stroke-[1.5] group-hover:text-crafting-azul transition-colors" />
                       <h3 className="text-crafting-branco font-light text-sm tracking-wide uppercase">Telefone</h3>
                     </div>
                     <a
@@ -51,46 +71,58 @@ export default function Contato() {
                     >
                       (11) 98236-9546
                     </a>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </div>
+          </AnimatedSection>
 
-            {/* Como chegar */}
+          {/* Como chegar */}
+          <AnimatedSection delay={0.2}>
             <div>
               <h2 className="mb-8 text-xl font-light tracking-tight">Como chegar</h2>
               
               <div className="space-y-3">
-                <Button
-                  asChild
-                  variant="outline"
-                  className="w-full border-crafting-verde/20 text-crafting-cinzaAlvo hover:bg-crafting-azul hover:border-crafting-azul hover:text-crafting-branco font-light tracking-wide rounded-sm"
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                 >
-                  <a
-                    href="https://waze.com/ul?q=Rua%20Alexandre%20Dumas,%201711,%20Chácara%20Santo%20Antônio,%20São%20Paulo"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="w-full border-crafting-verde/20 text-crafting-cinzaAlvo hover:bg-crafting-azul hover:border-crafting-azul hover:text-crafting-branco font-light tracking-wide rounded-sm transition-all duration-300"
                   >
-                    Abrir no Waze
-                  </a>
-                </Button>
+                    <a
+                      href="https://waze.com/ul?q=Rua%20Alexandre%20Dumas,%201711,%20Chácara%20Santo%20Antônio,%20São%20Paulo"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Abrir no Waze
+                    </a>
+                  </Button>
+                </motion.div>
                 
-                <Button
-                  asChild
-                  variant="outline"
-                  className="w-full border-crafting-verde/20 text-crafting-cinzaAlvo hover:bg-crafting-azul hover:border-crafting-azul hover:text-crafting-branco font-light tracking-wide rounded-sm"
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                 >
-                  <a
-                    href="https://maps.google.com/?q=Rua+Alexandre+Dumas,+1711,+Chácara+Santo+Antônio,+São+Paulo"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="w-full border-crafting-verde/20 text-crafting-cinzaAlvo hover:bg-crafting-azul hover:border-crafting-azul hover:text-crafting-branco font-light tracking-wide rounded-sm transition-all duration-300"
                   >
-                    Abrir no Google Maps
-                  </a>
-                </Button>
+                    <a
+                      href="https://maps.google.com/?q=Rua+Alexandre+Dumas,+1711,+Chácara+Santo+Antônio,+São+Paulo"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Abrir no Google Maps
+                    </a>
+                  </Button>
+                </motion.div>
               </div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>

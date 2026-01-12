@@ -93,11 +93,11 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-crafting-azul text-crafting-branco px-6 py-3 rounded-lg font-medium hover:bg-crafting-verde transition-colors;
+    @apply bg-crafting-azul text-crafting-branco px-6 py-3 rounded-lg font-medium hover:bg-crafting-verde transition-all duration-300 hover:scale-[1.02] active:scale-[0.98];
   }
   
   .btn-secondary {
-    @apply border border-crafting-verde text-crafting-cinzaAlvo px-6 py-3 rounded-lg font-medium hover:border-crafting-azul hover:text-crafting-branco transition-colors;
+    @apply border border-crafting-verde text-crafting-cinzaAlvo px-6 py-3 rounded-lg font-medium hover:border-crafting-azul hover:text-crafting-branco transition-all duration-300 hover:scale-[1.02] active:scale-[0.98];
   }
   
   .section-padding {
@@ -106,6 +106,45 @@
   
   .container-custom {
     @apply max-w-7xl mx-auto;
+  }
+  
+  /* Animações customizadas */
+  .fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  .slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Efeito de glassmorphism sutil */
+  .glass {
+    @apply backdrop-blur-xl bg-crafting-grafite/80 border border-crafting-verde/10;
+  }
+  
+  /* Gradiente sutil para backgrounds */
+  .gradient-subtle {
+    background: linear-gradient(135deg, rgba(40, 71, 79, 0.1) 0%, rgba(35, 43, 47, 0.05) 100%);
   }
 }
 

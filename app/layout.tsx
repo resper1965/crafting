@@ -28,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={`${roboto.variable} ${montserrat.variable} font-sans antialiased dark`}>
+      <body className={`${roboto.variable} ${montserrat.variable} font-sans antialiased dark scroll-smooth`}>
         <Navigation />
         <main className="min-h-screen">
           {children}
